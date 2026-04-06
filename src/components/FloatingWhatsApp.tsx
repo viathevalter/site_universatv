@@ -14,7 +14,7 @@ export function FloatingWhatsApp({ locale = "global" }: { locale?: Locale }) {
   }, []);
 
   const isEs = locale === "es";
-  const wppNumber = isEs ? "34617598421" : "5547996342377";
+  const wppNumber = isEs ? "34617598421" : "554799563627";
   const defaultText = isEs 
      ? "Hola UniversaTV, me gustaría recibir más información." 
      : "Olá UniversaTV, gostaria de mais informações.";

@@ -12,7 +12,7 @@ export default function PrivacidadPage() {
     },
     {
       title: "Quiénes somos",
-      content: "Este sitio web es operado por UniversaTV, que actúa a través de canales digitales, páginas comerciales y atención al cliente.\nContacto por e-mail: info@universatv.com\nWhatsApp Brasil: +55 47 99634-2377\nWhatsApp España: +34 617 59 84 21"
+      content: "Este sitio web es operado por UniversaTV, que actúa a través de canales digitales, páginas comerciales y atención al cliente.\nContacto por e-mail: info@universatv.com\nWhatsApp Brasil: +55 47 9956 3627\nWhatsApp España: +34 617 59 84 21"
     },
     {
       title: "Qué datos podemos recopilar",
@@ -52,7 +52,7 @@ export default function PrivacidadPage() {
     },
     {
       title: "Contacto",
-      content: "Para dudas sobre esta Política de Privacidad o sobre el tratamiento de datos, contacta con nosotros:\nE-mail: info@universatv.com\nWhatsApp Brasil: +55 47 99634-2377\nWhatsApp España: +34 617 59 84 21"
+      content: "Para dudas sobre esta Política de Privacidad o sobre el tratamiento de datos, contacta con nosotros:\nE-mail: info@universatv.com\nWhatsApp Brasil: +55 47 9956 3627\nWhatsApp España: +34 617 59 84 21"
     }
   ];
 

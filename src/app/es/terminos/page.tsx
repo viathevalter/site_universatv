@@ -48,7 +48,7 @@ export default function TerminosPage() {
     },
     {
       title: "Contacto",
-      content: "Para dudas sobre estos Términos de Uso, contacta con nosotros:\nE-mail: info@universatv.com\nWhatsApp Brasil: +55 47 99634-2377\nWhatsApp España: +34 617 59 84 21"
+      content: "Para dudas sobre estos Términos de Uso, contacta con nosotros:\nE-mail: info@universatv.com\nWhatsApp Brasil: +55 47 9956 3627\nWhatsApp España: +34 617 59 84 21"
     }
   ];
 
