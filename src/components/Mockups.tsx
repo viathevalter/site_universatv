@@ -29,7 +29,7 @@ export function MockupDashboard() {
         {/* Main Content */}
         <div className="flex-1 p-6 flex flex-col gap-6">
           <div className="flex justify-between items-center">
-            <h3 className="text-white/80 font-medium">Dashboard Overview</h3>
+            <h3 className="text-white/80 font-medium">Visão Operacional</h3>
             <div className="h-8 w-24 bg-orange-brand/20 border border-orange-brand/30 rounded-lg" />
           </div>
           

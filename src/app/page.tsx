@@ -101,7 +101,7 @@ export default function Home() {
                   title="CRM Resellers" 
                   description="Controle clientes, assinaturas, cobranças e atendimento em uma plataforma criada para profissionalizar sua operação."
                   icon={Presentation}
-                  badge="B2B Plataform"
+                  badge="Gestão B2B"
                   ctaLabel="Conhecer o CRM"
                 />
               </AnimatedSection>

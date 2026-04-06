@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageSquare, CreditCard, Bot } from "lucide-react";
+import { MessageSquare, CreditCard, Bot, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -57,9 +57,6 @@ export default function CrmPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center mb-16">
             <AnimatedSection>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md">
-                <span className="text-xs font-bold text-white/70 uppercase tracking-widest">Premium Resellers Framework</span>
-              </div>
               <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tighter">
                 Controle, automatize e escale sua revenda em um <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">único ecossistema.</span>
               </h1>
@@ -97,8 +94,10 @@ export default function CrmPage() {
               <div className="bg-[#0A0A0A] border border-white/5 rounded-3xl p-10 relative overflow-hidden h-full">
                 <p className="text-white/60 mb-2 font-medium">Quando a operação cresce, o improviso começa a limitar o negócio</p>
                 <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-4 tracking-tight">
-                  <span className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40">✕</span>
-                  A Operação Manual
+                  <div className="w-10 h-10 rounded-full bg-orange-brand/10 border border-orange-brand/20 flex items-center justify-center text-orange-brand mx-auto shrink-0">
+                    <AlertTriangle size={20} />
+                  </div>
+                  O Problema
                 </h3>
                 <ul className="space-y-6">
                   {dorItems.map((prob, idx) => (
@@ -115,8 +114,10 @@ export default function CrmPage() {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-orange-brand/10 blur-[80px] pointer-events-none" />
                 <p className="text-orange-brand mb-2 font-medium relative z-10">Transforme sua revenda em uma operação mais profissional</p>
                 <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-4 tracking-tight relative z-10">
-                  <span className="w-10 h-10 rounded-full bg-orange-brand/20 flex items-center justify-center text-orange-brand shadow-inner">✓</span>
-                  O Universo Controlado
+                  <div className="w-10 h-10 rounded-full bg-orange-brand/20 flex items-center justify-center text-orange-brand shadow-inner shrink-0">
+                    <CheckCircle2 size={20} />
+                  </div>
+                  A Solução
                 </h3>
                 <p className="text-white/70 leading-relaxed mb-10 font-medium relative z-10">
                   Centralize sua gestão em uma plataforma pensada para acompanhar o dia a dia da operação, reduzir falhas e dar mais controle sobre clientes, pagamentos e atendimento.
