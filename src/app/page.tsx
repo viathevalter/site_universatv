@@ -69,7 +69,7 @@ export default function Home() {
             
             <AnimatedSection delay={0.2}>
               <p className="text-lg md:text-2xl text-white/50 leading-relaxed mb-16 max-w-4xl mx-auto font-medium">
-                A UniversaTV reúne duas frentes em uma única marca: uma experiência moderna de entretenimento para o público final e uma plataforma de gestão pensada para revendedores que querem crescer com mais controle.
+                A UniversaTV reúne duas frentes em uma única marca: uma experiência moderna de entretenimento para o público final e uma plataforma de gestão pensada para operações que querem crescer com mais controle.
               </p>
             </AnimatedSection>
 
@@ -98,7 +98,7 @@ export default function Home() {
               <AnimatedSection delay={0.5}>
                 <NavCard 
                   href="/crm" 
-                  title="CRM Resellers" 
+                  title="CRM para Revendedores" 
                   description="Controle clientes, assinaturas, cobranças e atendimento em uma plataforma criada para profissionalizar sua operação."
                   icon={Presentation}
                   badge="Gestão B2B"

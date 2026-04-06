@@ -92,12 +92,12 @@ export default function CrmPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <AnimatedSection>
               <div className="bg-[#0A0A0A] border border-white/5 rounded-3xl p-10 relative overflow-hidden h-full">
-                <p className="text-white/60 mb-2 font-medium">Quando a operação cresce, o improviso começa a limitar o negócio</p>
-                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-4 tracking-tight">
+                <p className="text-white/60 mb-2 font-medium">Os desafios do modelo manual</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-4 tracking-tight">
                   <div className="w-10 h-10 rounded-full bg-orange-brand/10 border border-orange-brand/20 flex items-center justify-center text-orange-brand mx-auto shrink-0">
                     <AlertTriangle size={20} />
                   </div>
-                  O Problema
+                  Quando a operação depende do improviso
                 </h3>
                 <ul className="space-y-6">
                   {dorItems.map((prob, idx) => (
@@ -112,12 +112,12 @@ export default function CrmPage() {
             <AnimatedSection delay={0.2}>
               <div className="bg-[#111] border border-orange-brand/30 rounded-3xl p-10 shadow-[0_0_40px_rgba(249,115,22,0.05)] relative overflow-hidden h-full">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-orange-brand/10 blur-[80px] pointer-events-none" />
-                <p className="text-orange-brand mb-2 font-medium relative z-10">Transforme sua revenda em uma operação mais profissional</p>
-                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-4 tracking-tight relative z-10">
+                <p className="text-orange-brand mb-2 font-medium relative z-10">Tudo o que você precisa para ter mais controle</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-4 tracking-tight relative z-10">
                   <div className="w-10 h-10 rounded-full bg-orange-brand/20 flex items-center justify-center text-orange-brand shadow-inner shrink-0">
                     <CheckCircle2 size={20} />
                   </div>
-                  A Solução
+                  Uma plataforma para organizar e escalar
                 </h3>
                 <p className="text-white/70 leading-relaxed mb-10 font-medium relative z-10">
                   Centralize sua gestão em uma plataforma pensada para acompanhar o dia a dia da operação, reduzir falhas e dar mais controle sobre clientes, pagamentos e atendimento.
@@ -140,7 +140,7 @@ export default function CrmPage() {
         <div className="absolute inset-0 bg-orange-brand/5 mix-blend-overlay" />
         <div className="container mx-auto px-6 max-w-6xl relative z-10">
           <AnimatedSection className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">Uma estrutura pensada para operar no Brasil e na Europa</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">Estrutura pensada para Brasil e Europa</h2>
             <p className="text-white/50 max-w-2xl mx-auto text-xl font-medium">
               A plataforma foi idealizada para apoiar operações em diferentes mercados, com foco em gestão, cobrança, atendimento e crescimento.
             </p>
@@ -152,7 +152,7 @@ export default function CrmPage() {
                 <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 text-white group-hover:bg-white/10 transition-colors">
                   <CreditCard size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">Cobrança integrada para uma operação mais eficiente</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">Cobrança integrada para operar com mais eficiência</h3>
                 <p className="text-white/50 leading-relaxed mb-10 font-medium">
                   Estruture sua operação para acompanhar pagamentos, vencimentos e rotinas financeiras com mais clareza.
                 </p>
@@ -169,7 +169,7 @@ export default function CrmPage() {
                 <div className="w-16 h-16 rounded-2xl bg-orange-brand/20 border border-orange-brand/30 flex items-center justify-center mb-8 text-orange-brand shadow-inner">
                   <Bot size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">Atendimento com apoio de IA</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">IA aplicada à operação</h3>
                 <p className="text-white/80 leading-relaxed font-medium">
                   Use agentes inteligentes para agilizar respostas, aumentar a produtividade e dar mais velocidade ao suporte sem perder controle da operação.
                 </p>
@@ -181,7 +181,7 @@ export default function CrmPage() {
                 <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 text-white group-hover:bg-white/10 transition-colors">
                   <MessageSquare size={32} />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight">Atendimento centralizado e mais organizado</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight">Atendimento centralizado e mais inteligente</h3>
                 <p className="text-white/50 leading-relaxed mb-10 font-medium">
                   Conecte sua operação a canais estratégicos e tenha mais controle sobre conversas, suporte e relacionamento com seus clientes.
                 </p>
