@@ -54,8 +54,8 @@ export function Footer({ locale = "global" }: FooterProps) {
             {content.copyright}
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/termos" className="text-white/40 text-sm hover:text-white transition-colors font-medium">{content.legal[0]}</Link>
-            <Link href="/privacidade" className="text-white/40 text-sm hover:text-white transition-colors font-medium">{content.legal[1]}</Link>
+            <Link href={isEs ? "/es/terminos" : "/termos"} className="text-white/40 text-sm hover:text-white transition-colors font-medium">{content.legal[0]}</Link>
+            <Link href={isEs ? "/es/privacidad" : "/privacidade"} className="text-white/40 text-sm hover:text-white transition-colors font-medium">{content.legal[1]}</Link>
           </div>
         </div>
       </div>
