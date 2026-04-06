@@ -170,19 +170,38 @@ export default function CrmPage() {
       <FaqSection faqs={faqs} title="Dúvidas Frequentes" subtitle="Mais detalhes sobre a arquitetura do software" />
 
       {/* CTA Final */}
-      <section className="py-40 relative text-center bg-[#020202]">
-        <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-orange-brand/10 to-transparent pointer-events-none" />
+      <section className="py-48 relative text-center bg-[#020202] border-t border-white/5 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] bg-orange-brand/10 blur-[150px] pointer-events-none mix-blend-screen" />
+        <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-orange-brand/5 to-transparent pointer-events-none" />
+        
+        {/* Abstract Grid Elements */}
+        <div className="absolute inset-0 grid grid-cols-12 gap-px opacity-10">
+          {Array.from({ length: 12 }).map((_, i) => <div key={i} className="h-full border-r border-white/20" />)}
+        </div>
+
         <div className="container mx-auto px-6 relative z-10">
           <AnimatedSection>
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter">
-              {crmContent.closing}
+            <div className="inline-block mb-6 relative">
+              <div className="absolute inset-0 bg-orange-brand blur-2xl opacity-20" />
+              <span className="relative flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-[#1A1A1A] to-[#0A0A0A] border border-white/10 shadow-2xl">
+                <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-white/50">U</span>
+              </span>
+            </div>
+            <h2 className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-tight">
+              A evolução definitiva <br className="hidden md:block"/> do seu <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">negócio.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-white/50 mb-12 max-w-2xl mx-auto font-medium">
-              Profissionalize hoje sua operação com a plataforma líder global em gestão em entretenimento.
+            <p className="text-xl md:text-2xl text-white/40 mb-16 max-w-3xl mx-auto font-medium leading-relaxed tracking-tight">
+              Pare de vender de forma amadora em planilhas e assuma o controle do seu destino financeiro com o framework preferido da América Latina e Europa.
             </p>
-            <a href="#" className="inline-block px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:bg-white/90 hover:scale-[1.02] shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all">
-              Falar com um Executivo
-            </a>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a href="#" className="w-full sm:w-auto px-12 py-5 rounded-full bg-white text-black font-black text-lg tracking-wide hover:bg-white/90 hover:scale-[1.02] shadow-[0_0_40px_rgba(255,255,255,0.15)] transition-all">
+                Iniciar Transformação
+              </a>
+              <a href="#solucao" className="w-full sm:w-auto px-12 py-5 rounded-full bg-transparent text-white font-bold text-lg tracking-wide border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all">
+                Explorar Solução
+              </a>
+            </div>
           </AnimatedSection>
         </div>
       </section>
