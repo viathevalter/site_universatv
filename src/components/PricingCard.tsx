@@ -11,15 +11,16 @@ interface PricingPlanProps {
   isPopular?: boolean;
   ctaText: string;
   popularText?: string;
+  desc?: string;
 }
 
 export function PricingCard({ 
-  name, price, period, paymentLink, delay = 0, isPopular = false, ctaText, popularText 
+  name, price, period, paymentLink, delay = 0, isPopular = false, ctaText, popularText, desc 
 }: PricingPlanProps) {
   return (
     <AnimatedSection delay={delay} className="h-full">
       <div 
-        className={`h-full relative flex flex-col p-8 rounded-3xl bg-card border transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] group ${
+        className={`h-full relative flex flex-col p-8 rounded-3xl bg-[#0A0A0A] border transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] group ${
           isPopular 
             ? "border-orange-brand/50 shadow-[0_0_20px_rgba(249,115,22,0.1)]" 
             : "border-white/5 hover:border-white/10"
@@ -33,12 +34,15 @@ export function PricingCard({
           </div>
         )}
 
-        <div className="mb-6 mt-2 flex-grow">
-          <h3 className="text-xl font-medium text-white/80 mb-4">{name}</h3>
-          <div className="flex items-baseline gap-2">
-            <span className="text-4xl lg:text-5xl font-bold text-white group-hover:text-orange-brand transition-colors tracking-tight">{price}</span>
-            <span className="text-sm text-white/50 font-medium">{period}</span>
+        <div className="mb-8 mt-2 flex-grow">
+          <h3 className="text-xl font-bold text-white/90 mb-4 tracking-tight">{name}</h3>
+          <div className="flex items-baseline gap-2 mb-4">
+            <span className="text-4xl lg:text-5xl font-black text-white transition-colors tracking-tighter">{price}</span>
+            {period && <span className="text-sm text-white/50 font-medium">{period}</span>}
           </div>
+          {desc && (
+             <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
+          )}
         </div>
 
         <a 
@@ -46,7 +50,7 @@ export function PricingCard({
           className={`w-full py-4 text-center rounded-xl font-bold transition-all ${
             isPopular
               ? "bg-orange-brand text-white hover:bg-orange-brand/90 hover:shadow-[0_0_20px_rgba(249,115,22,0.4)]"
-              : "bg-white/5 text-white hover:bg-white/10"
+              : "bg-white/5 border border-white/5 text-white hover:bg-white/10"
           }`}
         >
           {ctaText}

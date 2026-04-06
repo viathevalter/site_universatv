@@ -11,11 +11,11 @@ import { pricingES, extraPointES, globalFeaturesES } from "@/data/pricing-es";
 
 export default function SpainPage() {
   const faqs = [
-    { question: "¿Cómo funciona la activación?", answer: "La activación es rápida y práctica. Después de elegir el plan y confirmar el pago, recibirás tus datos de acceso inmediatamente junto con instrucciones detalladas para instalar en cualquier dispositivo." },
-    { question: "¿Puedo usarlo en diferentes dispositivos?", answer: "¡Sí! Nuestra plataforma es totalmente compatible con Smart TVs, móviles, tablets, TV Box y ordenadores. Disfruta con total libertad donde estés." },
-    { question: "¿Qué pasa si necesito más accesos?", answer: "Puedes ampliar tu plan con un punto adicional por solo 4 € al mes por cada acceso extra simultáneo." },
-    { question: "¿Qué plan me conviene más?", answer: "El plan Anual ofrece el mayor descuento, pero muchos usuarios prefieren el Trimestral o Semestral para un buen equilibrio entre precio y flexibilidad." },
-    { question: "¿Hay soporte?", answer: "Sí, ofrecemos soporte continuo VIP para garantizar que tu experiencia sea perfecta. Si necesitas ayuda con la instalación, nuestro equipo está siempre disponible." }
+    { question: "¿Cómo funciona la activación?", answer: "Después de elegir tu plan, recibirás la información necesaria para comenzar de forma simple y rápida." },
+    { question: "¿Puedo usarlo en diferentes dispositivos?", answer: "Sí. La experiencia está pensada para funcionar en distintos dispositivos compatibles." },
+    { question: "¿Qué pasa si necesito más accesos?", answer: "Puedes añadir puntos adicionales por 4 €/mes cada uno." },
+    { question: "¿Qué plan me conviene más?", answer: "Si buscas flexibilidad, el plan mensual puede ser ideal. Si buscas mejor valor, los planes de mayor duración suelen ser la opción más conveniente." },
+    { question: "¿Hay soporte?", answer: "Sí. La experiencia está pensada para ofrecer una atención más clara y organizada." }
   ];
 
   return (
@@ -30,21 +30,26 @@ export default function SpainPage() {
         <div className="absolute top-40 left-[-10%] w-[500px] h-[500px] bg-orange-brand/10 blur-[150px] rounded-full pointer-events-none opacity-40 mix-blend-screen" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-5xl mx-auto text-center mb-16">
             <AnimatedSection>
               <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tighter">
-                La libertad de ver lo que quieras, <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">donde quieras.</span>
+                Tu entretenimiento con más libertad, practicidad y variedad.
               </h1>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-              <p className="text-lg md:text-2xl text-white/50 leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
-                Tu TV transformada. Una experiencia moderna y flexible pensada para acompañar tu rutina en todos tus dispositivos.
+              <p className="text-lg md:text-2xl text-white/50 leading-relaxed mb-10 max-w-3xl mx-auto font-medium">
+                Disfruta de una experiencia moderna, flexible y pensada para acompañarte en tus dispositivos favoritos, con planes adaptados a tu ritmo.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
-              <a href="#plans" className="inline-flex items-center px-8 py-4 rounded-full bg-orange-brand text-white font-bold tracking-wide hover:bg-orange-brand/90 shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] transition-all">
-                Ver Planes Disponibles
-              </a>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="#plans" className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-orange-brand text-white font-bold tracking-wide hover:bg-orange-brand/90 shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] transition-all">
+                  Ver planes
+                </a>
+                <a href="#plans" className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold tracking-wide hover:bg-white/10 transition-all">
+                  Contratar ahora
+                </a>
+              </div>
             </AnimatedSection>
           </div>
           
@@ -56,14 +61,23 @@ export default function SpainPage() {
         </div>
       </section>
 
-      {/* Benefícios Globais */}
-      <section className="pt-48 pb-24 relative bg-[#020202]">
+      {/* Como Funciona */}
+      <section className="pt-48 pb-20 relative bg-[#020202]">
         <div className="container mx-auto px-6">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Todo lo que necesitas</h2>
+          <AnimatedSection className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Empieza en pocos pasos</h2>
             <p className="text-white/50 max-w-2xl mx-auto text-lg">
-              Independientemente del plan elegido, garantizas acceso total a nuestra infraestructura.
+              Elige el plan que mejor encaja contigo, recibe la activación y empieza a disfrutar de una experiencia más práctica, organizada y cómoda desde distintos dispositivos compatibles.
             </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Beneficios Globais */}
+      <section className="pb-24 relative bg-[#020202]">
+        <div className="container mx-auto px-6">
+          <AnimatedSection className="text-center mb-16 md:mt-10">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Más comodidad, más flexibilidad y una experiencia mejor organizada</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
@@ -81,40 +95,73 @@ export default function SpainPage() {
         </div>
       </section>
 
+      {/* Compatibilidad */}
+      <section className="py-20 relative bg-[#050505] border-t border-white/5">
+        <div className="container mx-auto px-6">
+          <AnimatedSection className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">Compatible con tu forma de ver contenido</h2>
+            <p className="text-white/50 text-lg leading-relaxed">
+              Disfruta desde Smart TV, móvil, tablet, TV Box y otros dispositivos compatibles, con una experiencia pensada para acompañarte en casa o donde estés.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Pricing / Planos */}
       <section id="plans" className="py-24 border-y border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-orange-brand/5 mix-blend-overlay" />
         <div className="container mx-auto px-6 relative z-10">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Elige tu plan</h2>
-            <p className="text-white/50 max-w-2xl mx-auto text-lg">
-              Nuestros planes te dan acceso total. La única diferencia es el tiempo que ahorras.
-            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Elige el plan ideal para disfrutar a tu manera</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
-            {pricingES.map((plan, idx) => (
-              <PricingCard
-                key={plan.id}
-                {...plan}
-                delay={idx * 0.1}
-                ctaText="Contratar Plan"
-                popularText="Más Popular"
-                isPopular={plan.id === "trimestral" || plan.id === "semestral"}
-              />
-            ))}
+            <PricingCard
+                 name="Mensual"
+                 price="9,50 €"
+                 period=""
+                 paymentLink="#"
+                 delay={0.1}
+                 ctaText="Contratar ahora"
+                 desc="Ideal para empezar con total flexibilidad."
+            />
+            <PricingCard
+                 name="Trimestral"
+                 price="25 €"
+                 period=""
+                 paymentLink="#"
+                 delay={0.2}
+                 ctaText="Contratar ahora"
+                 desc="Una opción práctica para disfrutar más tiempo con mejor valor."
+                 isPopular
+                 popularText="Recomendado"
+            />
+            <PricingCard
+                 name="Semestral"
+                 price="40 €"
+                 period=""
+                 paymentLink="#"
+                 delay={0.3}
+                 ctaText="Contratar ahora"
+                 desc="Equilibrio entre ahorro, comodidad y continuidad."
+            />
+            <PricingCard
+                 name="Anual"
+                 price="70 €"
+                 period=""
+                 paymentLink="#"
+                 delay={0.4}
+                 ctaText="Contratar ahora"
+                 desc="La mejor elección para quienes buscan el mejor valor a largo plazo."
+            />
           </div>
 
           <AnimatedSection delay={0.4}>
             <div className="max-w-3xl mx-auto bg-[#111] border border-orange-brand/20 shadow-[0_0_30px_rgba(249,115,22,0.05)] rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
               <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-orange-brand/20 blur-3xl pointer-events-none" />
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2 tracking-tight">Punto adicional de acceso</h3>
-                <p className="text-white/50 text-sm leading-relaxed max-w-md">{extraPointES.text}</p>
-              </div>
-              <div className="shrink-0 bg-black/50 px-6 py-4 rounded-2xl border border-white/10 text-center relative z-10">
-                <span className="block text-3xl font-bold text-orange-brand">{extraPointES.price}</span>
-                <span className="text-sm text-white/40 font-medium">{extraPointES.period}</span>
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold text-white mb-2 tracking-tight">¿Necesitas más de un acceso?</h3>
+                <p className="text-white/50 text-sm leading-relaxed max-w-md">Amplía tu plan con un punto adicional por solo 4 €/mes por acceso extra.</p>
               </div>
             </div>
           </AnimatedSection>
@@ -122,7 +169,27 @@ export default function SpainPage() {
       </section>
 
       {/* FAQ */}
-      <FaqSection faqs={faqs} title="Preguntas Frecuentes" subtitle="Resuelve tus dudas sobre el servicio" />
+      <FaqSection faqs={faqs} title="Preguntas frecuentes" />
+      
+      {/* Final CTA */}
+      <section className="py-32 relative text-center bg-[#020202]">
+        <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-orange-brand/10 to-transparent pointer-events-none" />
+        <div className="container mx-auto px-6 relative z-10">
+          <AnimatedSection>
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-12 tracking-tighter max-w-4xl mx-auto">
+              Elige tu plan y disfruta de una experiencia más práctica, flexible y moderna.
+            </h2>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a href="#plans" className="inline-block px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:bg-white/90 hover:scale-[1.02] shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all">
+                Ver planes
+              </a>
+              <a href="#plans" className="inline-block px-10 py-5 rounded-full bg-orange-brand text-white font-bold text-lg hover:bg-orange-brand/90 hover:scale-[1.02] shadow-[0_0_30px_rgba(249,115,22,0.3)] transition-all">
+                Contratar ahora
+              </a>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
       <Footer locale="es" />
     </div>

@@ -3,45 +3,45 @@ import { PricingPlan } from "./pricing-es";
 export const pricingBR: PricingPlan[] = [
   {
     id: "mensal",
-    name: "Plano Mensal",
+    name: "Mensal",
     price: "R$ 35",
-    period: "/ mês",
+    period: "",
     paymentLink: "#",
   },
   {
     id: "trimestral",
-    name: "Plano Trimestral",
+    name: "Trimestral",
     price: "R$ 90",
-    period: "/ 3 meses",
+    period: "",
     paymentLink: "#",
   },
   {
     id: "semestral",
-    name: "Plano Semestral",
+    name: "Semestral",
     price: "R$ 170",
-    period: "/ 6 meses",
+    period: "",
     paymentLink: "#",
   },
   {
     id: "anual",
-    name: "Plano Anual",
+    name: "Anual",
     price: "R$ 300",
-    period: "/ ano",
+    period: "",
     paymentLink: "#",
   },
 ];
 
 export const globalFeaturesBR = [
-  "+2000 canais de TV ao vivo",
-  "+140000 filmes e séries em 4K, FHD",
-  "Alterne entre seus dispositivos",
-  "Guia de programação (EPG) integrado",
-  "Tecnologia anti-travamento premium",
-  "Suporte VIP permanente 24/7",
+  "Planos para diferentes necessidades",
+  "Compatibilidade com vários dispositivos",
+  "Ativação prática",
+  "Mais liberdade para assistir do seu jeito",
+  "Experiência moderna e simples de usar",
+  "Estrutura pensada para facilitar o dia a dia",
 ];
 
 export const extraPointBR = {
-  price: "R$ 18",
-  period: "/ mês",
-  text: "Precisa de acessos simultâneos? Adicione um ponto extra ao seu plano para cada tela adicional.",
+  price: "R$ 18/mês",
+  period: "",
+  text: "Precisa de mais acessos? Adicione um ponto extra por apenas R$ 18/mês e adapte seu plano à sua necessidade.",
 };
