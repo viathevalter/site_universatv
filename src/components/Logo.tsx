@@ -11,7 +11,7 @@ interface LogoProps {
 export function Logo({ href = "/", className = "" }: LogoProps) {
   return (
     <Link href={href} className={`flex items-center gap-2 group ${className}`}>
-      <div className="relative h-10 md:h-12 w-auto flex items-center">
+      <div className="relative h-14 md:h-20 w-auto flex items-center">
         {/* We use standard html img element for scaling robustness across flex headers */}
         <img 
           src="/logo-horizontal.png" 
