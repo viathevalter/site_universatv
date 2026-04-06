@@ -15,8 +15,8 @@ interface PricingPlanProps {
 }
 
 export function PricingCard({ 
-  name, price, period, paymentLink, delay = 0, isPopular = false, ctaText, popularText, desc 
-}: PricingPlanProps) {
+  name, price, period, paymentLink = "#", delay = 0, isPopular = false, ctaText, popularText, desc, onClick 
+}: PricingPlanProps & { onClick?: () => void }) {
   return (
     <AnimatedSection delay={delay} className="h-full">
       <div 
@@ -47,7 +47,13 @@ export function PricingCard({
 
         <a 
           href={paymentLink}
-          className={`w-full py-4 text-center rounded-xl font-bold transition-all ${
+          onClick={(e) => {
+             if (onClick) {
+                e.preventDefault();
+                onClick();
+             }
+          }}
+          className={`w-full py-4 text-center rounded-xl font-bold transition-all cursor-pointer ${
             isPopular
               ? "bg-orange-brand text-white hover:bg-orange-brand/90 hover:shadow-[0_0_20px_rgba(249,115,22,0.4)]"
               : "bg-white/5 border border-white/5 text-white hover:bg-white/10"
