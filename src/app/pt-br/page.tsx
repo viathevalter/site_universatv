@@ -3,6 +3,7 @@
 import { CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { PricingCard } from "@/components/PricingCard";
 import { FaqSection } from "@/components/FaqSection";
@@ -191,6 +192,7 @@ export default function BrazilPage() {
         </div>
       </section>
 
+      <FloatingWhatsApp locale="pt-br" />
       <Footer locale="pt-br" />
     </div>
   );

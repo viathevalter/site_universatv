@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { PricingCard } from "@/components/PricingCard";
 import { FaqSection } from "@/components/FaqSection";
@@ -198,6 +199,7 @@ export default function SpainPage() {
         </div>
       </section>
 
+      <FloatingWhatsApp locale="es" />
       <Footer locale="es" />
 
       {/* Payment Selection Modal */}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MonitorPlay, Globe, Presentation, PlayCircle, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { MockupHome } from "@/components/Mockups";
 
@@ -148,6 +149,7 @@ export default function Home() {
         </div>
       </section>
 
+      <FloatingWhatsApp locale="global" />
       <Footer locale="global" />
     </div>
   );

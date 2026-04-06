@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 export default function PrivacidadPage() {
   const sections = [
@@ -101,6 +102,7 @@ export default function PrivacidadPage() {
         </div>
       </section>
 
+      <FloatingWhatsApp locale="es" />
       <Footer locale="es" />
     </div>
   );

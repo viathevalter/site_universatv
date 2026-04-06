@@ -3,6 +3,7 @@
 import { MessageSquare, CreditCard, Bot, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { FaqSection } from "@/components/FaqSection";
 import { MockupDashboard } from "@/components/Mockups";
@@ -248,6 +249,7 @@ export default function CrmPage() {
         </div>
       </section>
 
+      <FloatingWhatsApp locale="crm" />
       <Footer locale="crm" />
     </div>
   );

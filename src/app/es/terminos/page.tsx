@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 export default function TerminosPage() {
   const sections = [
@@ -97,6 +98,7 @@ export default function TerminosPage() {
         </div>
       </section>
 
+      <FloatingWhatsApp locale="es" />
       <Footer locale="es" />
     </div>
   );
