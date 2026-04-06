@@ -5,7 +5,7 @@ import { MonitorPlay, Globe, Presentation, PlayCircle, ArrowRight, CheckCircle2 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { MockupTV } from "@/components/Mockups";
+import { MockupHome } from "@/components/Mockups";
 
 function NavCard({ href, title, description, icon: Icon, badge, ctaLabel }: { href: string; title: string; description: string; icon: any; badge?: string, ctaLabel: string }) {
   return (
@@ -142,7 +142,7 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <AnimatedSection delay={0.2}>
             <div className="pt-10">
-              <MockupTV />
+              <MockupHome />
             </div>
           </AnimatedSection>
         </div>
