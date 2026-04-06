@@ -2,69 +2,46 @@ import { PricingPlan } from "./pricing-es";
 
 export const pricingBR: PricingPlan[] = [
   {
-    id: "mensal-1",
-    name: "Mensal",
+    id: "mensal",
+    name: "Plano Mensal",
     price: "R$ 35",
     period: "/ mês",
     paymentLink: "#",
-    features: [
-      "+2000 canais de TV ao vivo",
-      "+140000 filmes e séries em 4K, FHD",
-      "Alterne entre dispositivos",
-      "Guia de programação (EPG)",
-      "Tecnologia anti-travamento",
-      "Suporte VIP permanente",
-    ],
   },
   {
-    id: "trimestral-1",
-    name: "Trimestral",
+    id: "trimestral",
+    name: "Plano Trimestral",
     price: "R$ 90",
-    period: "/ trimestre",
+    period: "/ 3 meses",
     paymentLink: "#",
-    features: [
-      "+2000 canais de TV ao vivo",
-      "+140000 filmes e séries em 4K, FHD",
-      "Alterne entre dispositivos",
-      "Guia de programação (EPG)",
-      "Tecnologia anti-travamento",
-      "Suporte VIP permanente",
-    ],
   },
   {
-    id: "semestral-1",
-    name: "Semestral",
+    id: "semestral",
+    name: "Plano Semestral",
     price: "R$ 170",
-    period: "/ semestre",
+    period: "/ 6 meses",
     paymentLink: "#",
-    features: [
-      "+2000 canais de TV ao vivo",
-      "+140000 filmes e séries em 4K, FHD",
-      "Alterne entre dispositivos",
-      "Guia de programação (EPG)",
-      "Tecnologia anti-travamento",
-      "Suporte VIP permanente",
-    ],
   },
   {
-    id: "anual-1",
-    name: "Anual",
+    id: "anual",
+    name: "Plano Anual",
     price: "R$ 300",
     period: "/ ano",
     paymentLink: "#",
-    features: [
-      "+2000 canais de TV ao vivo",
-      "+140000 filmes e séries em 4K, FHD",
-      "Alterne entre dispositivos",
-      "Guia de programação (EPG)",
-      "Tecnologia anti-travamento",
-      "Suporte VIP permanente",
-    ],
   },
+];
+
+export const globalFeaturesBR = [
+  "+2000 canais de TV ao vivo",
+  "+140000 filmes e séries em 4K, FHD",
+  "Alterne entre seus dispositivos",
+  "Guia de programação (EPG) integrado",
+  "Tecnologia anti-travamento premium",
+  "Suporte VIP permanente 24/7",
 ];
 
 export const extraPointBR = {
   price: "R$ 18",
   period: "/ mês",
-  text: "Precisa de mais acessos? Adicione um ponto extra por apenas R$ 18/mês e adapte seu plano à sua necessidade.",
+  text: "Precisa de acessos simultâneos? Adicione um ponto extra ao seu plano para cada tela adicional.",
 };

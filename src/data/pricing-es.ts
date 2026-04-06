@@ -3,75 +3,51 @@ export type PricingPlan = {
   name: string;
   price: string;
   period: string;
-  features: string[];
   paymentLink: string;
 };
 
 export const pricingES: PricingPlan[] = [
   {
-    id: "mensual-1",
-    name: "1 Mes - 1 Dispositivo",
+    id: "mensual",
+    name: "Plan Mensual",
     price: "9,50 €",
     period: "/ mes",
     paymentLink: "#",
-    features: [
-      "+2000 canales de TV en vivo",
-      "+140000 películas y series en 4K, FHD",
-      "Alterna entre dispositivos",
-      "Guía de TV (EPG)",
-      "Tecnología anticongelante",
-      "Soporte VIP permanente",
-    ],
   },
   {
-    id: "trimestral-1",
-    name: "3 Meses - 1 Dispositivo",
+    id: "trimestral",
+    name: "Plan Trimestral",
     price: "25 €",
-    period: "/ trimestre",
+    period: "/ 3 meses",
     paymentLink: "#",
-    features: [
-      "+2000 canales de TV en vivo",
-      "+140000 películas y series en 4K, FHD",
-      "Alterna entre dispositivos",
-      "Guía de TV (EPG)",
-      "Tecnología anticongelante",
-      "Soporte VIP permanente",
-    ],
   },
   {
-    id: "semestral-1",
-    name: "6 Meses - 1 Dispositivo",
+    id: "semestral",
+    name: "Plan Semestral",
     price: "40 €",
-    period: "/ semestre",
+    period: "/ 6 meses",
     paymentLink: "#",
-    features: [
-      "+2000 canales de TV en vivo",
-      "+140000 películas y series en 4K, FHD",
-      "Alterna entre dispositivos",
-      "Guía de TV (EPG)",
-      "Tecnología anticongelante",
-      "Soporte VIP permanente",
-    ],
   },
   {
-    id: "anual-1",
-    name: "1 Año - 1 Dispositivo",
+    id: "anual",
+    name: "Plan Anual",
     price: "70 €",
     period: "/ año",
     paymentLink: "#",
-    features: [
-      "+2000 canales de TV en vivo",
-      "+140000 películas y series en 4K, FHD",
-      "Alterna entre dispositivos",
-      "Guía de TV (EPG)",
-      "Tecnología anticongelante",
-      "Soporte VIP permanente",
-    ],
   },
+];
+
+export const globalFeaturesES = [
+  "+2000 canales de TV en vivo",
+  "+140000 películas y series en 4K, FHD",
+  "Alterna entre tus dispositivos",
+  "Guía de TV (EPG) integrada",
+  "Tecnología anticongelante premium",
+  "Soporte VIP permanente 24/7",
 ];
 
 export const extraPointES = {
   price: "+4 €",
   period: "/ mes",
-  text: "¿Necesitas más de un acceso? Amplía tu plan con un punto adicional por solo 4 €/mes por acceso extra.",
+  text: "¿Necesitas más accesos simultáneos? Amplía cualquier plan con un punto adicional por acceso extra.",
 };

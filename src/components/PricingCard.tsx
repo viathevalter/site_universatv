@@ -1,13 +1,21 @@
 "use client";
 
-import { Check } from "lucide-react";
-import { pricingBR } from "@/data/pricing-br"; // Generic type can be extracted
 import { AnimatedSection } from "./AnimatedSection";
 
-// Allow generic type since structure is the same
-type PricingPlanProps = typeof pricingBR[0] & { delay?: number; isPopular?: boolean };
+interface PricingPlanProps {
+  name: string;
+  price: string;
+  period: string;
+  paymentLink: string;
+  delay?: number;
+  isPopular?: boolean;
+  ctaText: string;
+  popularText?: string;
+}
 
-export function PricingCard({ name, price, period, features, paymentLink, delay = 0, isPopular = false }: PricingPlanProps) {
+export function PricingCard({ 
+  name, price, period, paymentLink, delay = 0, isPopular = false, ctaText, popularText 
+}: PricingPlanProps) {
   return (
     <AnimatedSection delay={delay} className="h-full">
       <div 
@@ -17,40 +25,31 @@ export function PricingCard({ name, price, period, features, paymentLink, delay 
             : "border-white/5 hover:border-white/10"
         }`}
       >
-        {isPopular && (
+        {isPopular && popularText && (
           <div className="absolute -top-4 left-0 right-0 flex justify-center">
             <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(249,115,22,0.5)]">
-              Mais Popular / Más Popular
+              {popularText}
             </span>
           </div>
         )}
 
-        <div className="mb-6">
-          <h3 className="text-lg font-medium text-white/80 mb-2">{name}</h3>
+        <div className="mb-6 mt-2 flex-grow">
+          <h3 className="text-xl font-medium text-white/80 mb-4">{name}</h3>
           <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold text-white group-hover:text-orange-brand transition-colors">{price}</span>
-            <span className="text-sm text-white/50">{period}</span>
+            <span className="text-4xl lg:text-5xl font-bold text-white group-hover:text-orange-brand transition-colors tracking-tight">{price}</span>
+            <span className="text-sm text-white/50 font-medium">{period}</span>
           </div>
         </div>
 
-        <ul className="flex-1 space-y-4 mb-8">
-          {features.map((feature, idx) => (
-            <li key={idx} className="flex items-start gap-3 text-sm text-white/70">
-              <Check size={18} className="text-orange-brand shrink-0 mt-0.5" />
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
-
         <a 
           href={paymentLink}
-          className={`w-full py-4 text-center rounded-xl font-medium transition-all ${
+          className={`w-full py-4 text-center rounded-xl font-bold transition-all ${
             isPopular
               ? "bg-orange-brand text-white hover:bg-orange-brand/90 hover:shadow-[0_0_20px_rgba(249,115,22,0.4)]"
               : "bg-white/5 text-white hover:bg-white/10"
           }`}
         >
-          Assinar Agora / Suscribirse
+          {ctaText}
         </a>
       </div>
     </AnimatedSection>
