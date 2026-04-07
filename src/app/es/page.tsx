@@ -13,7 +13,7 @@ import { MockupTV } from "@/components/Mockups";
 import { pricingES, extraPointES, globalFeaturesES } from "@/data/pricing-es";
 
 export default function SpainPage() {
-  const [selectedPlan, setSelectedPlan] = useState<{name: string, revolutUrl: string} | null>(null);
+  const [selectedPlan, setSelectedPlan] = useState<{name: string, price: string, revolutUrl: string} | null>(null);
   const faqs = [
     { question: "¿Cómo funciona la activación?", answer: "Después de elegir tu plan, recibirás la información necesaria para comenzar de forma simple y rápida." },
     { question: "¿Puedo usarlo en diferentes dispositivos?", answer: "Sí. La experiencia está pensada para funcionar en distintos dispositivos compatibles." },
@@ -125,7 +125,7 @@ export default function SpainPage() {
                  price="9,50 €"
                  period=""
                  paymentLink="#"
-                 onClick={() => setSelectedPlan({ name: "Mensual", revolutUrl: "https://revolut.me/vitorfuji?currency=EUR&amount=950"})}
+                 onClick={() => setSelectedPlan({ name: "Mensual", price: "9,50 €", revolutUrl: "https://revolut.me/vitorfuji?currency=EUR&amount=950"})}
                  delay={0.1}
                  ctaText="Contratar ahora"
                  desc="Ideal para empezar con total flexibilidad."
@@ -135,7 +135,7 @@ export default function SpainPage() {
                  price="25 €"
                  period=""
                  paymentLink="#"
-                 onClick={() => setSelectedPlan({ name: "Trimestral", revolutUrl: "https://revolut.me/vitorfuji?currency=EUR&amount=2500"})}
+                 onClick={() => setSelectedPlan({ name: "Trimestral", price: "25 €", revolutUrl: "https://revolut.me/vitorfuji?currency=EUR&amount=2500"})}
                  delay={0.2}
                  ctaText="Contratar ahora"
                  desc="Una opción práctica para disfrutar más tiempo con mejor valor."
@@ -147,7 +147,7 @@ export default function SpainPage() {
                  price="40 €"
                  period=""
                  paymentLink="#"
-                 onClick={() => setSelectedPlan({ name: "Semestral", revolutUrl: "https://revolut.me/vitorfuji?currency=EUR&amount=4000"})}
+                 onClick={() => setSelectedPlan({ name: "Semestral", price: "40 €", revolutUrl: "https://revolut.me/vitorfuji?currency=EUR&amount=4000"})}
                  delay={0.3}
                  ctaText="Contratar ahora"
                  desc="Equilibrio entre ahorro, comodidad y continuidad."
@@ -157,7 +157,7 @@ export default function SpainPage() {
                  price="70 €"
                  period=""
                  paymentLink="#"
-                 onClick={() => setSelectedPlan({ name: "Anual", revolutUrl: "https://revolut.me/vitorfuji?currency=EUR&amount=7000"})}
+                 onClick={() => setSelectedPlan({ name: "Anual", price: "70 €", revolutUrl: "https://revolut.me/vitorfuji?currency=EUR&amount=7000"})}
                  delay={0.4}
                  ctaText="Contratar ahora"
                  desc="La mejor elección para quienes buscan el mejor valor a largo plazo."
@@ -236,10 +236,16 @@ export default function SpainPage() {
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                 <Image src="/Bizum.png" alt="Bizum" width={140} height={40} className="object-contain filter opacity-90 group-hover:opacity-100 transition-opacity brightness-[100] drop-shadow-md" />
-                <div className="text-center mt-2">
-                  <span className="block text-white font-bold tracking-wide">Pagar con Bizum</span>
-                  <span className="block text-white/50 text-sm mt-1">Envía el importe al Bizum: <strong className="text-white">617 59 84 21</strong></span>
-                  <span className="block text-orange-brand text-xs mt-2 font-medium">(Toca para avisar por WhatsApp tras el pago)</span>
+                <div className="text-center mt-2 flex flex-col items-center">
+                  <span className="block text-white font-bold tracking-wide mb-2">Pagar con Bizum</span>
+                  <span className="block text-white/70 text-sm mt-1 max-w-[280px]">
+                    Envía el valor de <strong className="text-white bg-white/10 px-1.5 py-0.5 rounded mx-0.5">{selectedPlan.price}</strong> por tu banco a través de Bizum al número: <br/>
+                    <strong className="text-white text-lg mt-2 inline-block">617 59 84 21</strong>
+                  </span>
+                  <span className="block text-white/40 text-[11px] mt-3 leading-tight max-w-[250px] italic">
+                    *Exclusivo para pagos a través del sistema bancario de España.
+                  </span>
+                  <span className="block text-orange-brand text-xs mt-3 font-medium bg-orange-brand/10 border border-orange-brand/20 px-3 py-1.5 rounded-full">(Toca para avisar por WhatsApp tras el pago)</span>
                 </div>
               </a>
             </div>

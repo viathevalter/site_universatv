@@ -40,7 +40,7 @@ export function MockupHome() {
                  <div key={i} className={`aspect-[2/3] w-24 md:w-36 rounded-lg bg-gradient-to-br ${gradient} border border-white/10 shadow-[0_10px_20px_rgba(0,0,0,0.5)] relative overflow-hidden`}>
                     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black to-transparent flex items-end p-2 md:p-3">
                       <div className="h-1.5 w-full bg-white/30 rounded-full overflow-hidden">
-                         <div className="h-full bg-orange-brand" style={{ width: `${Math.random() * 60 + 20}%` }} />
+                         <div className="h-full bg-orange-brand" style={{ width: `${[45, 78, 32, 60][i]}%` }} />
                       </div>
                     </div>
                  </div>
@@ -160,7 +160,7 @@ export function MockupTV() {
                       <div className="absolute top-2 left-2 px-2 py-1 bg-black/60 backdrop-blur-sm rounded text-[8px] font-bold text-white border border-white/10">EP 0{i+1}</div>
                       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black to-transparent flex items-end p-2 md:p-3">
                         <div className="h-1.5 w-full bg-white/30 rounded-full overflow-hidden">
-                           <div className="h-full bg-orange-brand" style={{ width: `${Math.random() * 60 + 20}%` }} />
+                           <div className="h-full bg-orange-brand" style={{ width: `${[35, 82, 45, 68, 24, 75][i]}%` }} />
                         </div>
                       </div>
                    </div>
