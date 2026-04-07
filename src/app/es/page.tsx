@@ -4,6 +4,7 @@ import { CheckCircle2, X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
+import { InteractiveParticles } from "@/components/InteractiveParticles";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -28,6 +29,7 @@ export default function SpainPage() {
 
       {/* Hero */}
       <section className="relative pt-40 pb-20 md:pt-48 md:pb-32 overflow-hidden border-b border-white/5">
+        <InteractiveParticles />
         <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-orange-brand/10 to-transparent pointer-events-none" />
         
         {/* Abstract Shapes */}

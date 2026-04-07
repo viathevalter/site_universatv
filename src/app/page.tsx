@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { MonitorPlay, Globe, Presentation, PlayCircle, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { InteractiveParticles } from "@/components/InteractiveParticles";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -45,6 +46,7 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 md:pt-48 md:pb-24 overflow-hidden">
+        <InteractiveParticles />
         {/* Abstract Background Glows */}
         <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-orange-brand/10 blur-[150px] rounded-full pointer-events-none opacity-50" />
         <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-orange-brand/5 blur-[120px] rounded-full pointer-events-none opacity-30" />
