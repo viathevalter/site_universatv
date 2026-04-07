@@ -17,7 +17,7 @@ export function InteractiveParticles() {
     const mouse = {
       x: -1000,
       y: -1000,
-      radius: 180
+      radius: 250
     };
 
     // UniversaTV Brand Colors + Highlights
@@ -104,7 +104,7 @@ export function InteractiveParticles() {
       particles = [];
       // Adjust density based on screen size to maintain performance
       const area = canvas.width * canvas.height;
-      const numberOfParticles = Math.min(Math.floor(area / 10000), 400); // Max 400 particles for perf
+      const numberOfParticles = Math.min(Math.floor(area / 3000), 1200); // Increased density
       for (let i = 0; i < numberOfParticles; i++) {
         let x = Math.random() * canvas.width;
         let y = Math.random() * canvas.height;
