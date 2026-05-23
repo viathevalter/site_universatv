@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-type Locale = "global" | "es" | "pt-br" | "crm";
+type Locale = "global" | "es" | "pt-br" | "crm" | "en";
 
 export function FloatingWhatsApp({ locale = "global" }: { locale?: Locale }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,8 +14,13 @@ export function FloatingWhatsApp({ locale = "global" }: { locale?: Locale }) {
   }, []);
 
   const isEs = locale === "es";
-  const wppNumber = isEs ? "34617598421" : "554799563627";
-  const defaultText = isEs 
+  const isEn = locale === "en";
+  // UK/English will use the Spanish number (+34617598421) as requested by the user
+  const wppNumber = (isEs || isEn) ? "34617598421" : "554799563627";
+  
+  const defaultText = isEn
+     ? "Hello UniversaTV, I would like to receive more information."
+     : isEs 
      ? "Hola UniversaTV, me gustaría recibir más información." 
      : "Olá UniversaTV, gostaria de mais informações.";
 

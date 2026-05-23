@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
 
-type Locale = "global" | "es" | "pt-br" | "crm";
+type Locale = "global" | "es" | "pt-br" | "crm" | "en";
 
 interface NavbarProps {
   locale?: Locale;
@@ -27,6 +27,7 @@ export function Navbar({ locale = "global" }: NavbarProps) {
   // Define locale-specific links and CTA text
   const navLinks = {
     global: [
+      { href: "/en", label: "United Kingdom" },
       { href: "/es", label: "España" },
       { href: "/pt-br", label: "Brasil" },
       { href: "/crm", label: "CRM Resellers" },
@@ -39,10 +40,15 @@ export function Navbar({ locale = "global" }: NavbarProps) {
       { href: "/", label: "Início" },
       { href: "/crm", label: "Plataforma CRM" },
     ],
+    en: [
+      { href: "/", label: "Home" },
+      { href: "/crm", label: "CRM Platform" },
+    ],
     crm: [
       { href: "/", label: "Início" },
       { href: "/pt-br", label: "Brasil" },
       { href: "/es", label: "España" },
+      { href: "/en", label: "United Kingdom" },
     ],
   };
 
@@ -50,6 +56,7 @@ export function Navbar({ locale = "global" }: NavbarProps) {
     global: null,
     es: "Ver Planes",
     "pt-br": "Ver Planos",
+    en: "View Plans",
     crm: "Falar com Consultor",
   };
 

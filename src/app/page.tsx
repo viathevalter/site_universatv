@@ -77,8 +77,18 @@ export default function Home() {
             </AnimatedSection>
 
             {/* Navigation Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left relative z-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto text-left relative z-20">
               <AnimatedSection delay={0.3}>
+                <NavCard 
+                  href="/en" 
+                  title="United Kingdom" 
+                  description="Plans in pounds (£), modern experience and a simpler way to enjoy your streaming."
+                  icon={Globe}
+                  badge="Streaming"
+                  ctaLabel="View UK"
+                />
+              </AnimatedSection>
+              <AnimatedSection delay={0.4}>
                 <NavCard 
                   href="/es" 
                   title="España" 
@@ -88,7 +98,7 @@ export default function Home() {
                   ctaLabel="Ver España"
                 />
               </AnimatedSection>
-              <AnimatedSection delay={0.4}>
+              <AnimatedSection delay={0.5}>
                 <NavCard 
                   href="/pt-br" 
                   title="Brasil" 
@@ -98,7 +108,7 @@ export default function Home() {
                   ctaLabel="Ver Brasil"
                 />
               </AnimatedSection>
-              <AnimatedSection delay={0.5}>
+              <AnimatedSection delay={0.6}>
                 <NavCard 
                   href="/crm" 
                   title="CRM para Revendedores" 

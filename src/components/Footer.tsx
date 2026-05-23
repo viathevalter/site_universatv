@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 
-type Locale = "global" | "es" | "pt-br" | "crm";
+type Locale = "global" | "es" | "pt-br" | "crm" | "en";
 
 interface FooterProps {
   locale?: Locale;
@@ -10,20 +10,26 @@ interface FooterProps {
 export function Footer({ locale = "global" }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
-  // Adapt texts to pt-br or es depending on locale. For global/crm, default to pt-br texts for links.
   const isEs = locale === "es";
+  const isEn = locale === "en";
 
   const content = {
-    desc: isEs 
+    desc: isEn
+      ? "Digital experience, flexible plans and a more practical way to enjoy your entertainment."
+      : isEs 
       ? "Experiencia digital, planes flexibles y una forma más práctica de disfrutar tu entretenimiento."
       : "Experiência digital, planos flexíveis e uma forma mais prática de aproveitar seu entretenimento.",
-    links: isEs ? [
+    links: isEn ? [
+      "Home", "Plans", "Compatibility", "FAQ", "Contact", "Support"
+    ] : isEs ? [
       "Inicio", "Planes", "Compatibilidad", "Preguntas frecuentes", "Contacto", "Soporte"
     ] : [
       "Início", "Planos", "Compatibilidade", "Perguntas frequentes", "Contato", "Suporte"
     ],
-    legal: isEs ? ["Términos de Uso", "Privacidad"] : ["Termos de Uso", "Privacidade"],
-    copyright: isEs 
+    legal: isEn ? ["Terms of Use", "Privacy Policy"] : isEs ? ["Términos de Uso", "Privacidad"] : ["Termos de Uso", "Privacidade"],
+    copyright: isEn
+      ? `© ${currentYear} UniversaTV. All rights reserved.`
+      : isEs 
       ? `© ${currentYear} UniversaTV. Todos los derechos reservados.`
       : `© ${currentYear} UniversaTV. Todos os direitos reservados.`
   };
@@ -54,8 +60,8 @@ export function Footer({ locale = "global" }: FooterProps) {
             {content.copyright}
           </p>
           <div className="flex items-center gap-6">
-            <Link href={isEs ? "/es/terminos" : "/termos"} className="text-white/40 text-sm hover:text-white transition-colors font-medium">{content.legal[0]}</Link>
-            <Link href={isEs ? "/es/privacidad" : "/privacidade"} className="text-white/40 text-sm hover:text-white transition-colors font-medium">{content.legal[1]}</Link>
+            <Link href={isEn ? "/terms" : isEs ? "/es/terminos" : "/termos"} className="text-white/40 text-sm hover:text-white transition-colors font-medium">{content.legal[0]}</Link>
+            <Link href={isEn ? "/privacy" : isEs ? "/es/privacidad" : "/privacidade"} className="text-white/40 text-sm hover:text-white transition-colors font-medium">{content.legal[1]}</Link>
           </div>
         </div>
       </div>
