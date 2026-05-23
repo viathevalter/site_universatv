@@ -43,3 +43,16 @@ body {
   background-color: rgba(249, 115, 22, 0.3);
   color: #fff;
 }
+
+@keyframes float-y {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float-y 3s ease-in-out infinite;
+}

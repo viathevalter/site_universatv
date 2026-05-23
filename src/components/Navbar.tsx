@@ -63,6 +63,7 @@ export function Navbar({ locale = "global" }: NavbarProps) {
   const links = navLinks[locale];
   const ctaText = ctaTranslations[locale];
   const ctaHref = locale === "crm" ? "#solucao" : "#plans";
+  const isLandingPage = locale === "en";
 
   return (
     <header
@@ -74,53 +75,63 @@ export function Navbar({ locale = "global" }: NavbarProps) {
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Logo href={locale === "global" ? "/" : `/${locale}`} />
+        {isLandingPage ? (
+          <div className="w-full flex justify-center">
+            <Logo href="/en" />
+          </div>
+        ) : (
+          <>
+            <Logo href={locale === "global" ? "/" : `/${locale}`} />
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium text-white/70 hover:text-white transition-colors">
-              {link.label}
-            </Link>
-          ))}
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center gap-8">
+              {links.map((link) => (
+                <Link key={link.href} href={link.href} className="text-sm font-medium text-white/70 hover:text-white transition-colors">
+                  {link.label}
+                </Link>
+              ))}
 
-          {ctaText && (
-            <a 
-              href={ctaHref} 
-              className="text-sm font-medium bg-orange-brand/10 text-orange-brand px-5 py-2.5 rounded-full border border-orange-brand/20 hover:bg-orange-brand hover:text-white hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all"
+              {ctaText && (
+                <a 
+                  href={ctaHref} 
+                  className="text-sm font-medium bg-orange-brand/10 text-orange-brand px-5 py-2.5 rounded-full border border-orange-brand/20 hover:bg-orange-brand hover:text-white hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all"
+                >
+                  {ctaText}
+                </a>
+              )}
+            </nav>
+
+            {/* Mobile menu toggle */}
+            <button 
+              className="md:hidden text-white p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {ctaText}
-            </a>
-          )}
-        </nav>
-
-        {/* Mobile menu toggle */}
-        <button 
-          className="md:hidden text-white p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </>
+        )}
       </div>
 
       {/* Mobile Nav */}
-      <div className={cn(
-        "md:hidden absolute top-full left-0 w-full bg-[#0A0A0A] border-b border-white/5 transition-all duration-300 overflow-hidden",
-        mobileMenuOpen ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
-      )}>
-        <nav className="flex flex-col p-6 gap-4">
-          {links.map((link) => (
-            <Link key={link.href} onClick={() => setMobileMenuOpen(false)} href={link.href} className="text-white/80 font-medium">
-              {link.label}
-            </Link>
-          ))}
-          {ctaText && (
-             <a onClick={() => setMobileMenuOpen(false)} href={ctaHref} className="text-orange-brand font-medium">
-              {ctaText}
-             </a>
-          )}
-        </nav>
-      </div>
+      {!isLandingPage && (
+        <div className={cn(
+          "md:hidden absolute top-full left-0 w-full bg-[#0A0A0A] border-b border-white/5 transition-all duration-300 overflow-hidden",
+          mobileMenuOpen ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
+        )}>
+          <nav className="flex flex-col p-6 gap-4">
+            {links.map((link) => (
+              <Link key={link.href} onClick={() => setMobileMenuOpen(false)} href={link.href} className="text-white/80 font-medium">
+                {link.label}
+              </Link>
+            ))}
+            {ctaText && (
+               <a onClick={() => setMobileMenuOpen(false)} href={ctaHref} className="text-orange-brand font-medium">
+                {ctaText}
+               </a>
+            )}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
