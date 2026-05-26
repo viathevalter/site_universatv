@@ -147,7 +147,7 @@ export default function UkPage() {
                    name: "Monthly", 
                    price: "£9.50", 
                    revolutUrl: "https://revolut.me/vitorfuji?currency=GBP&amount=950",
-                   paypalUrl: "https://paypal.me/vitorfuji/9.50"
+                   paypalUrl: "https://www.paypal.com/ncp/payment/3PKAMCKC2DQ5Y"
                  })}
                  delay={0.1}
                  ctaText="Order now"
@@ -162,7 +162,7 @@ export default function UkPage() {
                    name: "Quarterly", 
                    price: "£25", 
                    revolutUrl: "https://revolut.me/vitorfuji?currency=GBP&amount=2500",
-                   paypalUrl: "https://paypal.me/vitorfuji/25"
+                   paypalUrl: "https://www.paypal.com/ncp/payment/ZTBTEZQ3527Z2"
                  })}
                  delay={0.2}
                  ctaText="Order now"
@@ -179,7 +179,7 @@ export default function UkPage() {
                    name: "Semiannual", 
                    price: "£40", 
                    revolutUrl: "https://revolut.me/vitorfuji?currency=GBP&amount=4000",
-                   paypalUrl: "https://paypal.me/vitorfuji/40"
+                   paypalUrl: "https://www.paypal.com/ncp/payment/R9ARY2LGAUMJG"
                  })}
                  delay={0.3}
                  ctaText="Order now"
@@ -194,7 +194,7 @@ export default function UkPage() {
                    name: "Annual", 
                    price: "£70", 
                    revolutUrl: "https://revolut.me/vitorfuji?currency=GBP&amount=7000",
-                   paypalUrl: "https://paypal.me/vitorfuji/70"
+                   paypalUrl: "https://www.paypal.com/ncp/payment/CUQVNPM8V9GMA"
                  })}
                  delay={0.4}
                  ctaText="Order now"
