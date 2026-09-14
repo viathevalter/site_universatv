@@ -29,6 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${outfit.variable} dark antialiased scroll-smooth`}>
+      <head>
+        <meta name="cryptomus" content="9063c873" />
+        <meta name="cryptomus" content="eb9abc00" />
+      </head>
       <body className="min-h-screen bg-background text-foreground flex flex-col font-sans">
         {children}
       </body>
