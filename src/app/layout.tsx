@@ -30,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${outfit.variable} dark antialiased scroll-smooth`}>
       <head>
+        <meta name="cryptomus" content="b6b3d6a0" />
         <meta name="cryptomus" content="9063c873" />
         <meta name="cryptomus" content="eb9abc00" />
       </head>
