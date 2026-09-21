@@ -150,6 +150,100 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Planos em Destaque (Compliance e Vendas) */}
+      <section className="py-24 relative bg-[#080808] border-t border-b border-white/5">
+        <div className="container mx-auto px-6">
+          <AnimatedSection className="text-center mb-16">
+             <span className="text-orange-brand text-xs font-bold uppercase tracking-widest bg-orange-brand/10 px-4 py-1.5 rounded-full mb-4 inline-block">
+               Planes y Precios Oficiales
+             </span>
+             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
+               Elige el plan de suscripción ideal para ti
+             </h2>
+             <p className="text-white/60 max-w-2xl mx-auto text-base">
+               Acceso inmediato a entretenimiento digital con activación rápida, soporte técnico y cancelación flexible.
+             </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="bg-[#111] border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:border-orange-brand/30 transition-all">
+              <div>
+                <span className="text-white/60 text-xs font-bold uppercase tracking-wider">Plan Mensual</span>
+                <div className="my-4">
+                  <span className="text-4xl font-black text-white">9,50 €</span>
+                  <span className="text-white/40 text-xs"> / mes</span>
+                </div>
+                <ul className="space-y-2 text-white/70 text-xs mb-6">
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> 1 Acceso simultáneo</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> Calidad Full HD / 4K</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> Activación rápida</li>
+                </ul>
+              </div>
+              <Link href="/es" className="w-full py-3 rounded-xl bg-white/10 hover:bg-orange-brand text-white font-bold text-xs uppercase tracking-wider text-center transition-all">
+                Ver detalles
+              </Link>
+            </div>
+
+            <div className="bg-[#111] border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:border-orange-brand/30 transition-all">
+              <div>
+                <span className="text-white/60 text-xs font-bold uppercase tracking-wider">Plan Trimestral</span>
+                <div className="my-4">
+                  <span className="text-4xl font-black text-white">25,00 €</span>
+                  <span className="text-white/40 text-xs"> / 3 meses</span>
+                </div>
+                <ul className="space-y-2 text-white/70 text-xs mb-6">
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> 1 Acceso simultáneo</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> Ahorro garantizado</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> Soporte prioritario</li>
+                </ul>
+              </div>
+              <Link href="/es" className="w-full py-3 rounded-xl bg-white/10 hover:bg-orange-brand text-white font-bold text-xs uppercase tracking-wider text-center transition-all">
+                Ver detalles
+              </Link>
+            </div>
+
+            <div className="bg-[#16130f] border-2 border-orange-brand/50 rounded-3xl p-6 flex flex-col justify-between relative shadow-[0_0_30px_rgba(249,115,22,0.15)]">
+              <span className="absolute -top-3 right-6 bg-orange-brand text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                Popular
+              </span>
+              <div>
+                <span className="text-orange-brand text-xs font-bold uppercase tracking-wider">Plan Semestral</span>
+                <div className="my-4">
+                  <span className="text-4xl font-black text-white">40,00 €</span>
+                  <span className="text-white/40 text-xs"> / 6 meses</span>
+                </div>
+                <ul className="space-y-2 text-white/70 text-xs mb-6">
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> 1 Acceso simultáneo</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> Mejor coste-beneficio</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> Actualizaciones incluidas</li>
+                </ul>
+              </div>
+              <Link href="/es" className="w-full py-3 rounded-xl bg-orange-brand hover:bg-orange-brand/90 text-white font-bold text-xs uppercase tracking-wider text-center transition-all">
+                Contratar ahora
+              </Link>
+            </div>
+
+            <div className="bg-[#111] border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:border-orange-brand/30 transition-all">
+              <div>
+                <span className="text-white/60 text-xs font-bold uppercase tracking-wider">Plan Anual</span>
+                <div className="my-4">
+                  <span className="text-4xl font-black text-white">70,00 €</span>
+                  <span className="text-white/40 text-xs"> / 12 meses</span>
+                </div>
+                <ul className="space-y-2 text-white/70 text-xs mb-6">
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> 1 Acceso simultáneo</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> Mayor ahorro anual</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-orange-brand" /> Soporte VIP 24/7</li>
+                </ul>
+              </div>
+              <Link href="/es" className="w-full py-3 rounded-xl bg-white/10 hover:bg-orange-brand text-white font-bold text-xs uppercase tracking-wider text-center transition-all">
+                Ver detalles
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Visual Depth Section */}
       <section className="pt-10 pb-24 relative overflow-hidden bg-[#020202]">
         <div className="container mx-auto px-6 relative z-10">

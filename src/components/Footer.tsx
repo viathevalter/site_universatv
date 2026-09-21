@@ -37,20 +37,39 @@ export function Footer({ locale = "global" }: FooterProps) {
   return (
     <footer className="bg-[#020202] border-t border-white/5 pt-20 pb-10">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 mb-16">
           <div className="md:col-span-2">
             <Logo className="mb-6 delay-100" />
-            <p className="text-white/60 text-sm leading-relaxed max-w-xs font-medium">
+            <p className="text-white/60 text-sm leading-relaxed max-w-sm font-medium mb-4">
               {content.desc}
+            </p>
+            <p className="text-white/40 text-xs font-medium">
+              UniversaTV Digital Services & Media Subscriptions
             </p>
           </div>
 
           <div>
             <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-xs">Links</h4>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-4 text-white/50 text-sm font-medium">
-              {content.links.map((link, idx) => (
-                <span key={idx} className="hover:text-orange-brand transition-colors cursor-pointer">{link}</span>
-              ))}
+            <div className="flex flex-col space-y-3 text-white/50 text-sm font-medium">
+              <Link href="/es" className="hover:text-orange-brand transition-colors">Planes España (EUR)</Link>
+              <Link href="/en" className="hover:text-orange-brand transition-colors">Plans UK (GBP)</Link>
+              <Link href="/pt-br" className="hover:text-orange-brand transition-colors">Planos Brasil</Link>
+              <Link href="/es#faq" className="hover:text-orange-brand transition-colors">FAQ</Link>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-xs">Contacto & Soporte</h4>
+            <div className="flex flex-col space-y-3 text-white/50 text-sm font-medium">
+              <a href="mailto:soporte@universatv.com" className="hover:text-orange-brand transition-colors flex items-center gap-2">
+                ✉️ soporte@universatv.com
+              </a>
+              <a href="https://wa.me/34674016583" target="_blank" rel="noopener noreferrer" className="hover:text-orange-brand transition-colors flex items-center gap-2">
+                💬 +34 674 01 65 83
+              </a>
+              <span className="text-white/40 text-xs">
+                Soporte y atención 7 días a la semana
+              </span>
             </div>
           </div>
         </div>
